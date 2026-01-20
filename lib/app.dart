@@ -14,15 +14,8 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Cấu hình Dio với headers phù hợp để tránh lỗi 403
-    final dio = Dio(BaseOptions(
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      connectTimeout: const Duration(seconds: 30),
-      receiveTimeout: const Duration(seconds: 30),
-    ));
+    
+    final dio = Dio();
     
     return MultiBlocProvider(
       providers: [
